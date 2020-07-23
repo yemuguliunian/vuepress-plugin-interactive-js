@@ -1,0 +1,28 @@
+{
+  "name": "vuepress-plugin-interactive",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yemuguliunian/vuepress-plugin-interactive-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yemuguliunian/vuepress-plugin-interactive-js/issues"
+  },
+  "homepage": "https://github.com/yemuguliunian/vuepress-plugin-interactive-js#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "vuepress": "^1.5.2"
+  },
+  "dependencies": {
+    "markdown-it-container": "^3.0.0",
+    "prismjs": "^1.20.0"
+  }
+}
