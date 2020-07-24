@@ -34,11 +34,11 @@ module.exports = (options = {}) => {
             }
 
             return `
-            <InteractiveJs
-                htmlStr="${encodeURIComponent(htmlStr)}"
-                title="${title}"
-            >
-        `;
+                <InteractiveJs
+                    htmlStr="${encodeURIComponent(htmlStr)}"
+                    title="${title}"
+                >
+            `;
         } else {
             return `
               </InteractiveJs>
