@@ -3,7 +3,7 @@
         <header v-if="!!title">
             <h4>{{ title }}</h4>
         </header>
-        <div v-html="highlightCode" :class="`language-javascript extra-class`" />
+        <div v-html="highlightCode" class="language-javascript extra-class" />
         <div class="output-container">
             <div class="buttons-container">
                 <button id="run" class="button" @click="run">Run</button>
