@@ -26,7 +26,6 @@ export default {
     },
     data() {
         return {
-            language: 'javascript',
             highlightCode: '',
         };
     },
@@ -36,17 +35,24 @@ export default {
         },
     },
     mounted() {
-        const { codeStr } = this;
-        this.highlightCode = highlight(codeStr);
-        this.doc = this.$refs.iframeResult.contentWindow.document;
+        this.init();
     },
     methods: {
-        write() {
-            const { codeStr, doc } = this;
+        init() {
+            const { codeStr } = this;
+            // 代码高亮
+            this.highlightCode = highlight(codeStr);
+            this.doc = this.$refs.iframeResult.contentWindow.document;
 
             // 添加样式
             let styleEle = document.createElement('style');
             styleEle.innerHTML = style;
+
+            this.doc.head.appendChild(styleEle);
+        },
+
+        write() {
+            const { codeStr, doc } = this;
 
             let innerHTML = '<div id="console" class="output"></div>';
 
@@ -58,7 +64,6 @@ export default {
             let consolelogEl = doc.createElement('script');
             consolelogEl.text = consolelog;
 
-            doc.head.appendChild(styleEle);
             doc.body.innerHTML = innerHTML;
             doc.body.appendChild(consolelogEl);
             doc.body.appendChild(el);
