@@ -1,8 +1,12 @@
-# 使用
+# Example
 
-**js 基础**
+## Common Usage
 
+### Usage Example
+
+````md
 ::: javascript
+
 ```js
 var a = { n: 1 };
 var b = a;
@@ -12,11 +16,33 @@ a.x = a = { n: 2 };
 console.log(a.x);
 console.log(b);
 ```
+
+:::
+````
+
+### Result
+
+::: javascript
+
+```js
+var a = { n: 1 };
+var b = a;
+a.x = a = { n: 2 };
+
+// 请写出以下输出结果
+console.log(a.x);
+console.log(b);
+```
+
 :::
 
-**Array.includes()**
+## Set title
 
+### Usage Example
+
+````md
 ::: javascript JavaScript Demo: Array.includes()
+
 ```js
 const array1 = [1, 2, 3];
 
@@ -31,17 +57,28 @@ console.log(pets.includes("cat"));
 console.log(pets.includes("at"));
 // expected output: false
 ```
+
 :::
+````
 
-**Array.concat()**
+### Result
 
-::: javascript JavaScript Demo: Array.concat()
+::: javascript JavaScript Demo: Array.includes()
+
 ```js
-const array1 = ["a", "b", "c"];
-const array2 = ["d", "e", "f"];
-const array3 = array1.concat(array2);
+const array1 = [1, 2, 3];
 
-console.log(array3);
-// expected output: Array ["a", "b", "c", "d", "e", "f"]
+console.log(array1.includes(2));
+// expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// expected output: true
+
+console.log(pets.includes("at"));
+// expected output: false
 ```
+
 :::
+
