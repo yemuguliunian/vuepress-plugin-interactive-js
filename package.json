@@ -1,8 +1,11 @@
 {
-  "name": "vuepress-plugin-interactive",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "@yemu419/vuepress-plugin-interactive-js",
+  "version": "0.0.2",
+  "description": "interactive js plugin for vuepress",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
